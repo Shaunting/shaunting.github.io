@@ -182,6 +182,9 @@ nav.scrolled {
   position: absolute; inset: 0; z-index: 2; pointer-events: none;
   background: radial-gradient(ellipse 80% 80% at 50% 50%, transparent 20%, rgba(0,0,0,0.72) 100%);
 }
+[data-theme="light"] .vignette {
+  background: radial-gradient(ellipse 80% 80% at 50% 50%, transparent 20%, rgba(248,248,245,0.65) 100%);
+}
 
 /* Hero content */
 .hero-inner {
@@ -201,6 +204,15 @@ nav.scrolled {
   transition: border-color 0.3s;
 }
 .badge:hover { border-color: rgba(255,255,255,0.2); }
+[data-theme="light"] .badge {
+  background: linear-gradient(105deg, rgba(0,0,0,0.04) -5%, transparent 20%), rgba(255,255,255,0.7);
+  border-color: rgba(0,0,0,0.1);
+  color: rgba(0,0,0,0.55);
+}
+[data-theme="light"] .badge-dot {
+  background: #333;
+  box-shadow: 0 0 10px 2px rgba(0,0,0,0.2);
+}
 .badge-dot {
   width: 8px; height: 8px; background: #fff; border-radius: 50%;
   box-shadow: 0 0 10px 2px rgba(255,255,255,0.5);
@@ -282,17 +294,17 @@ nav.scrolled {
   position: absolute; bottom: 38px; left: 50%; transform: translateX(-50%);
   z-index: 10; display: flex; align-items: center; gap: 18px;
   font-family: 'Satoshi', sans-serif; font-size: 11px;
-  color: rgba(255,255,255,0.22); white-space: nowrap;
+  color: var(--text-30); white-space: nowrap;
   animation: scrollFade 3s ease-in-out infinite;
 }
 @keyframes scrollFade { 0%,100% { opacity: 0.6; } 50% { opacity: 1; } }
-.scroll-hr { width: 72px; height: 1px; background: rgba(255,255,255,0.1); }
+.scroll-hr { width: 72px; height: 1px; background: var(--border); }
 .scroll-mouse {
-  width: 18px; height: 28px; border: 1.5px solid rgba(255,255,255,0.18);
+  width: 18px; height: 28px; border: 1.5px solid var(--border);
   border-radius: 10px; display: flex; justify-content: center; padding-top: 5px;
 }
 .scroll-wheel {
-  width: 2px; height: 5px; background: rgba(255,255,255,0.35);
+  width: 2px; height: 5px; background: var(--text-30);
   border-radius: 999px; animation: sw 2s ease-in-out infinite;
 }
 @keyframes sw { 0%,100% { transform: translateY(0); opacity: 1; } 65% { transform: translateY(6px); opacity: 0; } }
