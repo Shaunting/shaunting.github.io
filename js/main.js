@@ -71,3 +71,21 @@ function parallaxTick() {
   heroInner.style.transform = `translate(${curX * 0.004}px, ${curY * 0.004}px)`;
   rafId = requestAnimationFrame(parallaxTick);
 }
+
+// ── Drag-to-scroll recommendations
+const recsScroll = document.getElementById('recsScroll');
+let isDragging = false, dragStartX, dragScrollLeft;
+
+recsScroll.addEventListener('mousedown', e => {
+  isDragging = true;
+  dragStartX = e.pageX - recsScroll.offsetLeft;
+  dragScrollLeft = recsScroll.scrollLeft;
+});
+recsScroll.addEventListener('mouseleave', () => { isDragging = false; });
+recsScroll.addEventListener('mouseup', () => { isDragging = false; });
+recsScroll.addEventListener('mousemove', e => {
+  if (!isDragging) return;
+  e.preventDefault();
+  const x = e.pageX - recsScroll.offsetLeft;
+  recsScroll.scrollLeft = dragScrollLeft - (x - dragStartX) * 1.4;
+});
