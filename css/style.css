@@ -1,0 +1,45 @@
+/* ── Reset ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+/* ── Design Tokens ── */
+:root {
+  --bg: #000;
+  --off-bg: #0a0a0a;
+  --surface: rgb(16,16,16);
+  --surface2: rgb(22,22,22);
+  --text: #fff;
+  --text-60: rgba(255,255,255,0.55);
+  --text-30: rgba(255,255,255,0.25);
+  --border: rgba(255,255,255,0.08);
+  --border-hover: rgba(255,255,255,0.18);
+  --accent: rgba(255,255,255,0.72);
+}
+
+[data-theme="light"] {
+  --bg: #f8f8f5;
+  --off-bg: #f2f2ef;
+  --surface: #fff;
+  --surface2: #f5f5f2;
+  --text: #0d0d0d;
+  --text-60: rgba(0,0,0,0.5);
+  --text-30: rgba(0,0,0,0.25);
+  --border: rgba(0,0,0,0.07);
+  --border-hover: rgba(0,0,0,0.15);
+  --accent: rgba(0,0,0,0.65);
+}
+
+/* ── Base ── */
+html { scroll-behavior: smooth; }
+
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.12); border-radius: 2px; }
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  transition: background 0.4s, color 0.4s;
+}
