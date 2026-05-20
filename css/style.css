@@ -102,14 +102,14 @@ nav.scrolled {
   transform: translateY(-1px);
 }
 .theme-btn {
-  background: rgba(255,255,255,0.05);
+  background: var(--nav-resume-bg);
   border: 1px solid var(--border);
   color: var(--text-60); border-radius: 8px;
   padding: 6px 10px; font-size: 14px; cursor: pointer;
   line-height: 1; margin-left: 10px;
   transition: color 0.2s, background 0.2s, transform 0.15s;
 }
-.theme-btn:hover { color: var(--text); background: rgba(255,255,255,0.1); transform: scale(1.05); }
+.theme-btn:hover { color: var(--text); background: var(--nav-resume-hover-bg); transform: scale(1.05); }
 
 @media (max-width: 960px) {
   nav { padding: 0 24px; }
@@ -427,7 +427,7 @@ section { padding: 110px 80px; border-top: 1px solid var(--border); }
 
 .about-grid {
   display: grid; grid-template-columns: 1fr 1fr;
-  gap: 80px; align-items: start;
+  gap: 80px; align-items: stretch;
   max-width: 1100px; margin: 0 auto;
 }
 .about-heading {
@@ -449,6 +449,9 @@ hr.divider { border: none; border-top: 1px solid var(--border); margin: 26px 0; 
 }
 .exp-table tr:last-child { border-bottom: none; }
 .exp-table tr:hover { background: rgba(255,255,255,0.02); }
+[data-theme="light"] .exp-table tr:hover {
+  background: rgba(0,0,0,0.03);
+}
 .exp-table td { padding: 14px 0; font-size: 13px; vertical-align: middle; }
 .exp-role {
   font-family: 'Satoshi', sans-serif; font-weight: 600;
@@ -459,7 +462,7 @@ hr.divider { border: none; border-top: 1px solid var(--border); margin: 26px 0; 
 .exp-current { color: var(--accent); font-weight: 600; }
 
 .about-photo {
-  width: 100%; height: 100%; min-height: 540px;
+  width: 100%; min-height: 540px;
   object-fit: cover; border-radius: 16px;
   filter: grayscale(0.12); display: block;
   transition: filter 0.4s, transform 0.4s ease;
