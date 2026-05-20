@@ -14,6 +14,10 @@
   --border-hover: rgba(255,255,255,0.18);
   --accent: rgba(255,255,255,0.72);
   --scrollbar-thumb: rgba(255,255,255,0.12);
+  --nav-scrolled-bg: rgba(0,0,0,0.78);
+  --nav-hover-bg: rgba(255,255,255,0.05);
+  --nav-resume-bg: rgba(255,255,255,0.07);
+  --nav-resume-hover-bg: rgba(255,255,255,0.13);
 }
 
 [data-theme="light"] {
@@ -28,6 +32,10 @@
   --border-hover: rgba(0,0,0,0.15);
   --accent: rgba(0,0,0,0.65);
   --scrollbar-thumb: rgba(0,0,0,0.18);
+  --nav-scrolled-bg: rgba(248,248,245,0.88);
+  --nav-hover-bg: rgba(0,0,0,0.05);
+  --nav-resume-bg: rgba(0,0,0,0.06);
+  --nav-resume-hover-bg: rgba(0,0,0,0.1);
 }
 
 /* ── Base ── */
@@ -57,7 +65,7 @@ nav {
   transition: background 0.5s ease, backdrop-filter 0.5s ease, border-color 0.5s ease;
 }
 nav.scrolled {
-  background: rgba(0,0,0,0.78);
+  background: var(--nav-scrolled-bg);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border-color: var(--border);
@@ -78,15 +86,15 @@ nav.scrolled {
   text-decoration: none; padding: 7px 13px; border-radius: 8px;
   transition: color 0.2s, background 0.2s;
 }
-.nav-links a:hover { color: var(--text); background: rgba(255,255,255,0.05); }
+.nav-links a:hover { color: var(--text); background: var(--nav-hover-bg); }
 .nav-resume {
   color: var(--text) !important;
-  background: rgba(255,255,255,0.07) !important;
+  background: var(--nav-resume-bg) !important;
   border: 1px solid var(--border) !important;
   font-weight: 600 !important;
 }
 .nav-resume:hover {
-  background: rgba(255,255,255,0.13) !important;
+  background: var(--nav-resume-hover-bg) !important;
   transform: translateY(-1px);
 }
 .theme-btn {
