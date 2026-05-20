@@ -659,3 +659,13 @@ footer {
 [data-reveal][data-reveal-delay="100"] { transition-delay: 0.1s; }
 [data-reveal][data-reveal-delay="150"] { transition-delay: 0.15s; }
 [data-reveal][data-reveal-delay="200"] { transition-delay: 0.2s; }
+
+/* ── Responsive catch-all ── */
+@media (max-width: 960px) {
+  section { padding: 80px 32px; }
+}
+@media (max-width: 600px) {
+  section { padding: 64px 20px; }
+  .cta-row { flex-direction: column; align-items: stretch; }
+  .cta-row .btn-p, .cta-row .btn-g { justify-content: center; }
+}
