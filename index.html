@@ -74,7 +74,82 @@
     <span>to see projects</span>
   </div>
 </section>
-  <!-- #projects -->
+  <section id="projects">
+  <div class="section-badge" style="display:table;margin:0 auto 12px">Selected Work</div>
+  <h2 class="section-heading" style="font-size:clamp(40px,5vw,64px);text-align:center;margin-bottom:56px" data-reveal>
+    Projects
+  </h2>
+
+  <div class="projects-grid">
+
+    <div class="proj-card" data-reveal data-reveal-delay="0">
+      <div class="proj-thumb-wrap">
+        <div class="proj-thumb proj-thumb--rag"></div>
+        <div class="proj-overlay">View Case Study ↗</div>
+      </div>
+      <div class="proj-info">
+        <div class="proj-tag">AI · Backend</div>
+        <div class="proj-name">uNote AI Tutor — RAG Pipeline</div>
+        <div class="proj-desc">FastAPI + pgvector semantic search under 500ms. Multi-LLM routing across OpenAI, Anthropic, Gemini. Supports 16K+ concurrent users.</div>
+      </div>
+    </div>
+
+    <div class="proj-card" data-reveal data-reveal-delay="100">
+      <div class="proj-thumb-wrap">
+        <div class="proj-thumb proj-thumb--llm"></div>
+        <div class="proj-overlay">View Case Study ↗</div>
+      </div>
+      <div class="proj-info">
+        <div class="proj-tag">AI Research</div>
+        <div class="proj-name">LLM Adversarial Robustness</div>
+        <div class="proj-desc">Designed prompt injection attacks against open-weight LLMs. Evaluated 180 outputs using OpenAI API as automated judge.</div>
+      </div>
+    </div>
+
+    <div class="proj-card" data-reveal data-reveal-delay="200">
+      <div class="proj-thumb-wrap">
+        <div class="proj-thumb proj-thumb--clinical"></div>
+        <div class="proj-overlay">View Case Study ↗</div>
+      </div>
+      <div class="proj-info">
+        <div class="proj-tag">AI · Health</div>
+        <div class="proj-name">AI Clinical Documentation</div>
+        <div class="proj-desc">Flask ETL: Whisper API transcription → Gemini structured extraction → normalized PostgreSQL schema.</div>
+      </div>
+    </div>
+
+    <div class="proj-card" data-reveal data-reveal-delay="0">
+      <div class="proj-thumb-wrap">
+        <div class="proj-thumb proj-thumb--cv"></div>
+        <div class="proj-overlay">View Case Study ↗</div>
+      </div>
+      <div class="proj-info">
+        <div class="proj-tag">Computer Vision</div>
+        <div class="proj-name">Floor Plan Segmentation</div>
+        <div class="proj-desc">Semi-supervised PyTorch pipeline via FixMatch. Near fully-supervised accuracy using only 15% labeled training data.</div>
+      </div>
+    </div>
+
+    <div class="proj-card" data-reveal data-reveal-delay="100">
+      <div class="proj-thumb-wrap">
+        <div class="proj-thumb proj-thumb--fitness"></div>
+        <div class="proj-overlay">View Case Study ↗</div>
+      </div>
+      <div class="proj-info">
+        <div class="proj-tag">ML · Classification</div>
+        <div class="proj-name">Fitness Workout Tracker</div>
+        <div class="proj-desc">Sensor data classification in Scikit-learn. 100+ engineered features with PCA, Fourier transforms, K-Means. 99% accuracy via Random Forest.</div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="projects-ctas" data-reveal>
+    <a href="#consulting" class="btn-p">
+      <div class="btn-p-inner"><span>Work With Me →</span></div>
+    </a>
+  </div>
+</section>
   <!-- #about -->
   <!-- #consulting -->
   <!-- #recommendations -->
