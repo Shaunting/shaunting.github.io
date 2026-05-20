@@ -249,6 +249,7 @@ nav.scrolled {
 
 /* CTA buttons */
 .cta-row { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; margin-top: 6px; }
+.cta-row--left { justify-content: flex-start; margin-top: 28px; }
 .btn-p {
   position: relative; display: inline-flex; align-items: center;
   text-decoration: none; font-family: 'Satoshi', sans-serif;
@@ -520,7 +521,7 @@ hr.divider { border: none; border-top: 1px solid var(--border); margin: 26px 0; 
 .process-card:hover {
   border-color: var(--border-hover);
   transform: translateX(4px);
-  background: rgba(255,255,255,0.02);
+  background: var(--surface2);
 }
 .process-num {
   position: absolute; top: 22px; right: 22px;
