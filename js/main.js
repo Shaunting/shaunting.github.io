@@ -77,6 +77,7 @@ const recsScroll = document.getElementById('recsScroll');
 let isDragging = false, dragStartX, dragScrollLeft;
 
 recsScroll.addEventListener('mousedown', e => {
+  e.preventDefault();
   isDragging = true;
   dragStartX = e.pageX - recsScroll.offsetLeft;
   dragScrollLeft = recsScroll.scrollLeft;
