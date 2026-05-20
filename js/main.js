@@ -25,6 +25,7 @@ function type() {
     twEl.textContent = word.slice(0, ci--);
     if (ci < 0) {
       deleting = false;
+      ci = 0;
       wi = (wi + 1) % words.length;
       setTimeout(type, 500);
       return;
