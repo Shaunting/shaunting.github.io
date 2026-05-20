@@ -13,6 +13,7 @@
   --border: rgba(255,255,255,0.08);
   --border-hover: rgba(255,255,255,0.18);
   --accent: rgba(255,255,255,0.72);
+  --scrollbar-thumb: rgba(255,255,255,0.12);
 }
 
 [data-theme="light"] {
@@ -26,6 +27,7 @@
   --border: rgba(0,0,0,0.07);
   --border-hover: rgba(0,0,0,0.15);
   --accent: rgba(0,0,0,0.65);
+  --scrollbar-thumb: rgba(0,0,0,0.18);
 }
 
 /* ── Base ── */
@@ -33,7 +35,7 @@ html { scroll-behavior: smooth; }
 
 ::-webkit-scrollbar { width: 4px; }
 ::-webkit-scrollbar-track { background: transparent; }
-::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.12); border-radius: 2px; }
+::-webkit-scrollbar-thumb { background: var(--scrollbar-thumb); border-radius: 2px; }
 
 body {
   font-family: 'Inter', sans-serif;
