@@ -20,6 +20,7 @@
       <li><a href="#about">About</a></li>
       <!-- <li><a href="#consulting">Consulting</a></li> -->
       <li><a href="#recommendations">Recommendations</a></li>
+      <li><a href="#contact">Contact</a></li>
       <li>
         <a href="assets/Shaun_Ting_AI_Engineer.pdf" class="nav-resume" download>
           ↓ Resume
@@ -57,14 +58,14 @@
       <a href="#projects" class="btn-p">
         <div class="btn-p-inner"><span>View My Work ↓</span></div>
       </a>
-      <a href="mailto:shaunting.ck@gmail.com" class="btn-g">Let's Talk →</a>
+      <a href="#contact" class="btn-g">Let's Talk →</a>
     </div>
     <div class="social-row">
       <a href="https://linkedin.com/in/shaunting" class="slink" target="_blank" rel="noopener">LinkedIn</a>
       <div class="sdiv"></div>
       <a href="https://github.com/shaunting" class="slink" target="_blank" rel="noopener">GitHub</a>
       <div class="sdiv"></div>
-      <a href="mailto:shaunting.ck@gmail.com" class="slink">Email</a>
+      <a href="#contact" class="slink">Email</a>
     </div>
   </div>
 
@@ -145,7 +146,7 @@
   </div>
 
   <div class="projects-ctas" data-reveal>
-    <a href="mailto:shaunting.ck@gmail.com" class="btn-p">
+    <a href="#contact" class="btn-p">
       <div class="btn-p-inner"><span>Work With Me →</span></div>
     </a>
   </div>
@@ -265,9 +266,6 @@
       <h2 class="section-heading recs-heading">Recommendations</h2>
       <p class="section-sub">Real feedback from people I've built with.</p>
       <div class="cta-row cta-row--left">
-        <a href="mailto:shaunting.ck@gmail.com" class="btn-p">
-          <div class="btn-p-inner"><span>Let's Work Together</span></div>
-        </a>
         <a href="https://linkedin.com/in/shaunting" class="btn-g" target="_blank" rel="noopener">
           LinkedIn ↗
         </a>
@@ -298,13 +296,48 @@
     </div>
   </div>
 </section>
+  <section id="contact">
+  <div class="contact-grid">
+    <div data-reveal>
+      <div class="section-badge">Contact</div>
+      <h2 class="section-heading contact-heading">Let's build something together.</h2>
+      <p class="section-sub">Fill out the form and I'll be in touch shortly.</p>
+    </div>
+    <form class="contact-form" data-reveal data-reveal-delay="150" action="https://formsubmit.co/shaunting.ck@gmail.com" method="POST">
+      <input type="hidden" name="_subject" value="New message from shaunting.github.io" />
+      <input type="hidden" name="_captcha" value="false" />
+      <input type="hidden" name="_next" value="https://shaunting.github.io/?sent=true#contact" />
+      <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
+      <div class="form-row">
+        <div class="form-field">
+          <label for="firstName">First Name</label>
+          <input type="text" id="firstName" name="first_name" placeholder="John" required />
+        </div>
+        <div class="form-field">
+          <label for="lastName">Last Name</label>
+          <input type="text" id="lastName" name="last_name" placeholder="Doe" required />
+        </div>
+      </div>
+      <div class="form-field">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" placeholder="john@company.com" required />
+      </div>
+      <div class="form-field">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+      </div>
+      <button type="submit" class="contact-submit">Send Message →</button>
+      <p class="form-status" id="formStatus" hidden></p>
+    </form>
+  </div>
+</section>
   <footer>
   <span class="footer-name">Shaun Ting</span>
   <span class="footer-copy">© 2026</span>
   <div class="footer-links">
     <a href="https://linkedin.com/in/shaunting" target="_blank" rel="noopener">LinkedIn</a>
     <a href="https://github.com/shaunting" target="_blank" rel="noopener">GitHub</a>
-    <a href="mailto:shaunting.ck@gmail.com">Email</a>
+    <a href="#contact">Email</a>
   </div>
 </footer>
   <script src="js/main.js"></script>
