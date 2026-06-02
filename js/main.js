@@ -102,11 +102,3 @@ const revealObserver = new IntersectionObserver(entries => {
 }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
 
 document.querySelectorAll('[data-reveal]').forEach(el => revealObserver.observe(el));
-
-// ── Contact form success message
-const formStatus = document.getElementById('formStatus');
-if (new URLSearchParams(window.location.search).get('sent') === 'true') {
-  formStatus.hidden = false;
-  formStatus.textContent = "Message sent — I'll get back to you soon.";
-  history.replaceState(null, '', window.location.pathname + '#contact');
-}
