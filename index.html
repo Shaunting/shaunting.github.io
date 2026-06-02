@@ -26,7 +26,6 @@
         </a>
       </li>
     </ul>
-    <button class="theme-btn" id="themeBtn" aria-label="Toggle theme">☀️</button>
   </nav>
   <section class="hero" id="home">
   <!-- Blob background -->
@@ -77,7 +76,6 @@
   </div>
 </section>
   <section id="projects">
-  <div class="section-badge proj-badge">Selected Work</div>
   <h2 class="section-heading proj-heading" data-reveal>
     Projects
   </h2>
@@ -86,7 +84,7 @@
 
     <div class="proj-card" data-reveal data-reveal-delay="0">
       <div class="proj-thumb-wrap">
-        <div class="proj-thumb proj-thumb--clinical"></div>
+        <img class="proj-thumb" src="assets/AI_Clinical_Documentation_System.jpg" alt="AI Clinical Documentation System" />
         <a class="proj-overlay" href="https://shaunting.github.io/AI-Clinical-Documentation-System/#demo" target="_blank" rel="noopener">View Project ↗</a>
       </div>
       <div class="proj-info">
@@ -98,7 +96,29 @@
 
     <div class="proj-card" data-reveal data-reveal-delay="200">
       <div class="proj-thumb-wrap">
-        <div class="proj-thumb proj-thumb--llm"></div>
+        <div class="proj-thumb proj-thumb--llm">
+          <svg class="proj-diagram" viewBox="0 0 400 220" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <defs>
+              <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+                <path d="M0,0 L6,3 L0,6 Z" fill="rgba(255,255,255,0.35)" />
+              </marker>
+            </defs>
+            <rect x="16" y="82" width="78" height="52" rx="10" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.22)" stroke-width="1"/>
+            <text x="55" y="104" text-anchor="middle" fill="rgba(255,255,255,0.6)" font-size="9" font-family="Inter, sans-serif" font-weight="500">Adversarial</text>
+            <text x="55" y="118" text-anchor="middle" fill="rgba(255,255,255,0.6)" font-size="9" font-family="Inter, sans-serif" font-weight="500">Prompt</text>
+            <line x1="94" y1="108" x2="112" y2="108" stroke="rgba(255,255,255,0.25)" stroke-width="1" marker-end="url(#arrow)"/>
+            <rect x="114" y="82" width="68" height="52" rx="10" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.22)" stroke-width="1"/>
+            <text x="148" y="112" text-anchor="middle" fill="rgba(255,255,255,0.6)" font-size="10" font-family="Inter, sans-serif" font-weight="500">LLM</text>
+            <line x1="182" y1="108" x2="200" y2="108" stroke="rgba(255,255,255,0.25)" stroke-width="1" marker-end="url(#arrow)"/>
+            <rect x="202" y="82" width="68" height="52" rx="10" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.22)" stroke-width="1"/>
+            <text x="236" y="112" text-anchor="middle" fill="rgba(255,255,255,0.6)" font-size="10" font-family="Inter, sans-serif" font-weight="500">Judge</text>
+            <line x1="270" y1="108" x2="288" y2="108" stroke="rgba(255,255,255,0.25)" stroke-width="1" marker-end="url(#arrow)"/>
+            <rect x="290" y="82" width="78" height="52" rx="10" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.28)" stroke-width="1"/>
+            <text x="329" y="104" text-anchor="middle" fill="rgba(255,255,255,0.65)" font-size="9" font-family="Inter, sans-serif" font-weight="500">Compliance</text>
+            <text x="329" y="118" text-anchor="middle" fill="rgba(255,255,255,0.65)" font-size="9" font-family="Inter, sans-serif" font-weight="500">Score</text>
+            <text x="200" y="168" text-anchor="middle" fill="rgba(255,255,255,0.28)" font-size="8" font-family="Inter, sans-serif" letter-spacing="0.08em">180 OUTPUTS · OPENAI JUDGE</text>
+          </svg>
+        </div>
       </div>
       <div class="proj-info">
         <div class="proj-tag">AI Research</div>
@@ -109,7 +129,7 @@
 
     <div class="proj-card" data-reveal data-reveal-delay="0">
       <div class="proj-thumb-wrap">
-        <div class="proj-thumb proj-thumb--cv"></div>
+        <img class="proj-thumb" src="assets/SemiSupervisedFloorPlan.jpg" alt="Semi-Supervised Floor Plan Segmentation" />
       </div>
       <div class="proj-info">
         <div class="proj-tag">Computer Vision</div>
@@ -120,7 +140,7 @@
 
     <div class="proj-card" data-reveal data-reveal-delay="100">
       <div class="proj-thumb-wrap">
-        <div class="proj-thumb proj-thumb--edumap"></div>
+        <img class="proj-thumb" src="assets/EduMap.jpg" alt="EduMap PDF-to-Mind-Map System" />
         <a class="proj-overlay" href="https://shaunting.github.io/EduMap/" target="_blank" rel="noopener">View Project ↗</a>
       </div>
       <div class="proj-info">
@@ -132,7 +152,7 @@
 
     <div class="proj-card" data-reveal data-reveal-delay="200">
       <div class="proj-thumb-wrap">
-        <div class="proj-thumb proj-thumb--fitness"></div>
+        <img class="proj-thumb" src="assets/Fitness_Workout_Tracker.jpg" alt="Fitness Workout Tracker" />
         <a class="proj-overlay" href="https://github.com/Shaunting/fitness-workout-tracker" target="_blank" rel="noopener">View Project ↗</a>
       </div>
       <div class="proj-info">
@@ -258,10 +278,9 @@
   <section id="recommendations">
   <div class="recs-top">
     <div class="recs-photo-wrap" data-reveal>
-      <span class="recs-placeholder">Photo coming soon</span>
+      <img src="assets/recommendations_pic.jpeg" alt="Shaun Ting" class="recs-photo" />
     </div>
     <div data-reveal data-reveal-delay="150">
-      <div class="section-badge">Recommendations</div>
       <h2 class="section-heading recs-heading">Recommendations</h2>
       <p class="section-sub">Real feedback from people I've built with.</p>
       <div class="cta-row cta-row--left">

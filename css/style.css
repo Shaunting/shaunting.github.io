@@ -101,15 +101,6 @@ nav.scrolled {
   background: var(--nav-resume-hover-bg) !important;
   transform: translateY(-1px);
 }
-.theme-btn {
-  background: var(--nav-resume-bg);
-  border: 1px solid var(--border);
-  color: var(--text-60); border-radius: 8px;
-  padding: 6px 10px; font-size: 14px; cursor: pointer;
-  line-height: 1; margin-left: 10px;
-  transition: color 0.2s, background 0.2s, transform 0.15s;
-}
-.theme-btn:hover { color: var(--text); background: var(--nav-resume-hover-bg); transform: scale(1.05); }
 
 @media (max-width: 960px) {
   nav { padding: 0 24px; }
@@ -375,19 +366,32 @@ section { padding: 110px 80px; border-top: 1px solid var(--border); }
 }
 .proj-thumb {
   width: 100%; height: 100%;
-  transition: transform 0.55s cubic-bezier(0.25,0.46,0.45,0.94);
+  display: block;
+  object-fit: cover;
+  object-position: center top;
+  filter: grayscale(1);
+  transition: transform 0.55s cubic-bezier(0.25,0.46,0.45,0.94), filter 0.4s ease;
   will-change: transform;
 }
-.proj-card:hover .proj-thumb { transform: scale(1.07); }
+.proj-card:hover .proj-thumb {
+  transform: scale(1.07);
+  filter: grayscale(0);
+}
 
-/* Per-project gradient backgrounds */
-.proj-thumb--rag     { background: linear-gradient(150deg, rgb(14,22,20), rgb(6,10,8)); }
-.proj-thumb--llm     { background: linear-gradient(150deg, rgb(14,14,24), rgb(6,6,12)); }
-.proj-thumb--clinical { background: linear-gradient(150deg, rgb(22,12,12), rgb(10,6,6)); }
-.proj-thumb--cv      { background: linear-gradient(150deg, rgb(20,18,10), rgb(9,8,5)); }
-.proj-thumb--fitness { background: linear-gradient(150deg, rgb(10,18,22), rgb(5,8,10)); }
-.proj-thumb--edumap  { background: linear-gradient(150deg, rgb(18,14,22), rgb(8,6,12)); }
-.proj-thumb--nba     { background: linear-gradient(150deg, rgb(22,14,10), rgb(10,6,5)); }
+/* Diagram fallback for projects without thumbnails */
+.proj-thumb--llm {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(150deg, rgb(14, 14, 24), rgb(6, 6, 12));
+  filter: grayscale(1);
+  transition: transform 0.55s cubic-bezier(0.25,0.46,0.45,0.94), filter 0.4s ease;
+}
+.proj-diagram {
+  width: 92%;
+  max-width: 360px;
+  height: auto;
+}
 
 a.proj-overlay { text-decoration: none; }
 
@@ -469,7 +473,7 @@ hr.divider { border: none; border-top: 1px solid var(--border); margin: 26px 0; 
 .about-photo {
   width: 100%; min-height: 540px;
   object-fit: cover; border-radius: 16px;
-  filter: grayscale(0.12); display: block;
+  filter: grayscale(1); display: block;
   transition: filter 0.4s, transform 0.4s ease;
 }
 .about-photo:hover { filter: grayscale(0); transform: scale(1.015); }
@@ -589,15 +593,23 @@ hr.divider { border: none; border-top: 1px solid var(--border); margin: 26px 0; 
   max-width: 1100px; margin: 0 auto 56px;
 }
 .recs-photo-wrap {
-  width: 100%; min-height: 360px; border-radius: 20px;
+  width: 100%; aspect-ratio: 4 / 5; max-height: 480px;
+  border-radius: 20px;
   border: 1px solid var(--border); background: var(--surface);
-  display: flex; align-items: center; justify-content: center;
+  overflow: hidden;
   transition: border-color 0.3s;
 }
 .recs-photo-wrap:hover { border-color: var(--border-hover); }
-.recs-placeholder {
-  font-family: 'Satoshi', sans-serif; font-size: 11px;
-  color: var(--text-30); text-transform: uppercase; letter-spacing: 0.08em;
+.recs-photo {
+  width: 100%; height: 100%;
+  object-fit: cover; object-position: center 62%;
+  display: block;
+  filter: grayscale(1);
+  transition: filter 0.4s ease, transform 0.4s ease;
+}
+.recs-photo-wrap:hover .recs-photo {
+  filter: grayscale(0);
+  transform: scale(1.015);
 }
 
 .recs-scroll {
