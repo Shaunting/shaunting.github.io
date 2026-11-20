@@ -7,7 +7,7 @@ window.addEventListener('scroll', () => {
 }, { passive: true });
 
 // ── Typewriter
-const words = ['AI Engineer', 'Data Scientist', 'ML Builder', 'Backend Engineer'];
+const words = ['AI Engineer', 'Software Engineer', 'Data Scientist', 'Data Analyst'];
 let wi = 0, ci = 0, deleting = false;
 const twEl = document.getElementById('tw');
 

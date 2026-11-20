@@ -702,3 +702,12 @@ html.js [data-reveal].visible {
   .cta-row { flex-direction: column; align-items: stretch; }
   .cta-row .btn-p, .cta-row .btn-g { justify-content: center; }
 }
+
+/* ── Featured (wide) project card ── */
+.proj-card--wide { grid-column: span 2; }
+.proj-card--wide .proj-thumb-wrap { aspect-ratio: 3 / 1; }
+.proj-diagram--wide { max-width: 620px; width: 96%; }
+@media (max-width: 600px) {
+  .proj-card--wide { grid-column: span 1; }
+  .proj-card--wide .proj-thumb-wrap { aspect-ratio: 3 / 2; }
+}
