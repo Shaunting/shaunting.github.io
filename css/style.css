@@ -711,3 +711,10 @@ html.js [data-reveal].visible {
   .proj-card--wide { grid-column: span 1; }
   .proj-card--wide .proj-thumb-wrap { aspect-ratio: 3 / 2; }
 }
+
+/* ── Only cards with a link look clickable; touch screens always show the link ── */
+.proj-card { cursor: default; }
+.proj-card.is-link { cursor: pointer; }
+@media (hover: none) {
+  .proj-overlay { opacity: 1; transform: translateX(-50%) translateY(0); }
+}
