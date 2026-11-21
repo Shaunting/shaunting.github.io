@@ -7,7 +7,7 @@ window.addEventListener('scroll', () => {
 }, { passive: true });
 
 // ── Typewriter
-const words = ['AI Engineer', 'Data Scientist', 'ML Builder', 'Backend Engineer'];
+const words = ['AI Engineer', 'Software Engineer', 'Data Scientist', 'Data Analyst'];
 let wi = 0, ci = 0, deleting = false;
 const twEl = document.getElementById('tw');
 
@@ -127,3 +127,14 @@ recsScroll.addEventListener('mousemove', e => {
   requestAnimationFrame(revealInView);
   window.addEventListener('load', revealInView, { once: true });
 })();
+
+// ── Project cards: the whole card opens its link (cards with no link are not clickable)
+document.querySelectorAll('.proj-card').forEach(card => {
+  const link = card.querySelector('a.proj-overlay');
+  if (!link) return;
+  card.classList.add('is-link');
+  card.addEventListener('click', e => {
+    if (e.target.closest('a')) return;
+    window.open(link.href, '_blank', 'noopener');
+  });
+});
